@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4407FB1C-5A2F-4F0D-BC10-36EE9C6279FC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EFTest</RootNamespace>
+    <AssemblyName>EFTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\auth_group.cs" />
+    <Compile Include="Model\auth_group_permissions.cs" />
+    <Compile Include="Model\auth_message.cs" />
+    <Compile Include="Model\auth_permission.cs" />
+    <Compile Include="Model\auth_user.cs" />
+    <Compile Include="Model\auth_user_groups.cs" />
+    <Compile Include="Model\auth_user_user_permissions.cs" />
+    <Compile Include="Model\DB.cs" />
+    <Compile Include="Model\django_admin_log.cs" />
+    <Compile Include="Model\django_content_type.cs" />
+    <Compile Include="Model\django_session.cs" />
+    <Compile Include="Model\django_site.cs" />
+    <Compile Include="Model\ob_activity_list.cs" />
+    <Compile Include="Model\ob_activity_list_activity_tag.cs" />
+    <Compile Include="Model\ob_activity_members.cs" />
+    <Compile Include="Model\ob_activity_tag.cs" />
+    <Compile Include="Model\ob_activity_topic.cs" />
+    <Compile Include="Model\ob_activity_type.cs" />
+    <Compile Include="Model\ob_app_info.cs" />
+    <Compile Include="Model\ob_app_version_control.cs" />
+    <Compile Include="Model\ob_asset_log.cs" />
+    <Compile Include="Model\ob_asset_operation_type.cs" />
+    <Compile Include="Model\ob_asset_safe.cs" />
+    <Compile Include="Model\ob_attenuation_pool.cs" />
+    <Compile Include="Model\ob_auth.cs" />
+    <Compile Include="Model\ob_banner.cs" />
+    <Compile Include="Model\ob_bourse.cs" />
+    <Compile Include="Model\ob_chain.cs" />
+    <Compile Include="Model\ob_charge_editor.cs" />
+    <Compile Include="Model\ob_currency.cs" />
+    <Compile Include="Model\ob_data_config.cs" />
+    <Compile Include="Model\ob_draft_news.cs" />
+    <Compile Include="Model\ob_draft_news_tag.cs" />
+    <Compile Include="Model\ob_editor.cs" />
+    <Compile Include="Model\ob_enshrine.cs" />
+    <Compile Include="Model\ob_error_pwd_log.cs" />
+    <Compile Include="Model\ob_extract_currency.cs" />
+    <Compile Include="Model\ob_feedback.cs" />
+    <Compile Include="Model\ob_friend.cs" />
+    <Compile Include="Model\ob_group.cs" />
+    <Compile Include="Model\ob_group_member.cs" />
+    <Compile Include="Model\ob_integral.cs" />
+    <Compile Include="Model\ob_integral_daily_record.cs" />
+    <Compile Include="Model\ob_integral_log.cs" />
+    <Compile Include="Model\ob_integral_total_record.cs" />
+    <Compile Include="Model\ob_invitation.cs" />
+    <Compile Include="Model\ob_invitation_record.cs" />
+    <Compile Include="Model\ob_login_record.cs" />
+    <Compile Include="Model\ob_media.cs" />
+    <Compile Include="Model\ob_media_list.cs" />
+    <Compile Include="Model\ob_news.cs" />
+    <Compile Include="Model\ob_news_flash.cs" />
+    <Compile Include="Model\ob_news_recommend.cs" />
+    <Compile Include="Model\ob_news_tag.cs" />
+    <Compile Include="Model\ob_share_record.cs" />
+    <Compile Include="Model\ob_tags.cs" />
+    <Compile Include="Model\ob_topic.cs" />
+    <Compile Include="Model\ob_user.cs" />
+    <Compile Include="Model\ob_user_record.cs" />
+    <Compile Include="Model\ob_wallet.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
